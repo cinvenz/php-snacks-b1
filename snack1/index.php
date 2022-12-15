@@ -1,3 +1,96 @@
+<?php
+ 
+ $arr_partite = [
+     [
+         "casa" => [
+             
+                 "nome" => "Olimpia Milano",
+                 "punteggio" => 55
+                
+             
+         ],
+         "ospite" => [
+             
+                 "nome" => "Cantù",
+                 "punteggio" => 60
+                 
+             
+          
+         ],
+     ],
+     [
+         "casa" => [
+             
+                 "nome" => "Sassuolo",
+                 "punteggio" => 84
+                
+             
+           
+         ],
+         "ospite" => [
+ 
+             
+                 "nome" => "Venezia",
+                 "punteggio" => 56
+                 
+             
+           
+         ],
+     ],
+     [
+         "casa" => [
+             
+                 "nome" => "Lazio",
+                 "punteggio" => 54
+                
+             
+           
+         ],
+         "ospite" => [
+
+             
+                 "nome" => "Roma",
+                 "punteggio" => 66
+                 
+             
+           
+         ],
+     ],
+     [
+         "casa" => [
+             
+                 "nome" => "Genoa",
+                 "punteggio" => 70
+                
+             
+           
+         ],
+         "ospite" => [
+ 
+             
+                 "nome" => "Torino",
+                 "punteggio" => 64
+                 
+             
+        
+         ],
+     ],
+ ];
+
+       // foreach ($arrmatch as $key => $value) {
+ //     foreach ($value as $key => $value_1) {
+ //         foreach ($value_1 as $key => $value_2) {
+ //             foreach ($value_2 as $key => $value_3) {
+ //                 $key++;
+ //                 echo $value_3;
+ //             }
+ //         }
+ //     }
+ // }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,59 +101,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php
- 
-        $arrmatch = array(
-            "match1" => [
-                "casa" => [
-                    [
-                        "nome" => "Olimpia Milano",
-                        "punteggio" => "55"
-                       
-                    ],
-                ],
-                "ospite" => [
-                    [
-                        "nome" => "Cantù",
-                        "punteggio" => "60"
-                        
-                    ],
-                 
-                ],
-            ],
-            "match2" => [
-                "casa" => [
-                    [
-                        "nome" => "Sassuolo",
-                        "punteggio" => "84"
-                       
-                    ],
-                  
-                ],
-                "ospite" => [
-        
-                    [
-                        "nome" => "Venezia",
-                        "punteggio" => "56"
-                        
-                    ],
-                  
-                ],
-            ],
-        );
-        
-        foreach ($arrmatch as $key => $value) {
-            foreach ($value as $key => $value_1) {
-                foreach ($value_1 as $key => $value_2) {
-                    foreach ($value_2 as $key => $value_3) {
-                        $key++;
-                        echo $value_3;
-                    }
-                }
-            }
-        }
+    <h1>Partite di basket</h1>
 
-    ?>
+
+
+    <ul><?php
+         
+    $arr_partite_len = count($arr_partite);
+
+    for ($i = 0; $i < $arr_partite_len; $i++) {
+        $match = $arr_partite[$i];
+        echo "<li> {$match['casa']['nome']} - {$match['ospite']['nome']} | {$match['casa']['punteggio']} - {$match['ospite']['punteggio']} </li>";
+    }
+    ?></ul>
+    
 
     
 </body>

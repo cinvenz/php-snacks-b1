@@ -8,7 +8,6 @@
 
 </head>
 <?php
-
     $arrnumber = [];
 
     while (count($arrnumber) < 15) {
